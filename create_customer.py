@@ -1,8 +1,9 @@
 import re
 
 class CreateCustomer:
-    def __init__(self, name, phone_number, email, national_code, password, repeat_password):
+    def __init__(self, name, familyname, phone_number, email, national_code, password, repeat_password):
         self.name = name
+        self.familyname = familyname
         self.phone_number = phone_number
         self.email = email
         self.national_code = national_code
@@ -22,6 +23,20 @@ class CreateCustomer:
             raise ValueError("Name must be without any numbers or punctuation.")
         
         self._name = value
+        
+        
+    @property
+    def family_name(self):
+        return self._familyname
+
+    @name.setter
+    def family_name(self, value):
+        validate_name = '^[a-zA-Z]+$'
+        
+        if not re.match(validate_name, value):
+            raise ValueError("LastName must be without any numbers or punctuation.")
+        
+        self._familyname = value
         
 
     @property
