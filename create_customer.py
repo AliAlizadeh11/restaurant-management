@@ -29,7 +29,7 @@ class CreateCustomer:
     def family_name(self):
         return self._familyname
 
-    @name.setter
+    @familyname.setter
     def family_name(self, value):
         validate_name = '^[a-zA-Z]+$'
         
