@@ -3,7 +3,7 @@ import re
 class CreateCustomer:
     def __init__(self, name, family_name, phone_number, email, national_code, password, repeat_password):
         self.name = name
-        self.family_name = familyname
+        self.family_name = family_name
         self.phone_number = phone_number
         self.email = email
         self.national_code = national_code
