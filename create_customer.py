@@ -27,7 +27,11 @@ class CreateCustomer:
         
     @property
     def family_name(self):
+<<<<<<< HEAD
         return self._family_name
+=======
+        return self._familyname
+>>>>>>> 0dac54b35024108779edbb788bfe1f5a62b8cc8e
 
     @family_name.setter
     def family_name(self, value):
@@ -37,7 +41,11 @@ class CreateCustomer:
             raise ValueError("LastName must be without any numbers or punctuation.")
         
         self._family_name = value
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 0dac54b35024108779edbb788bfe1f5a62b8cc8e
 
     @property
     def phone_number(self):
