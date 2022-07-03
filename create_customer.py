@@ -1,4 +1,5 @@
 import re
+import customer_database
 
 class CreateCustomer:
     def __init__(self, name, family_name, phone_number, email, national_code, password, repeat_password):
@@ -108,3 +109,5 @@ class CreateCustomer:
             raise ValueError("It's not a validate repeat password")
         
         self._repeat_password = value
+
+customer_objects = CreateCustomer()
