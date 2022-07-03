@@ -22,8 +22,7 @@ def create_table():
 
 def insert_table():
         """insert into customers table"""
-        c.execute('''INSERT INTO customers VALUES
-                (f'')''')
+        c.execute('''INSERT INTO customers VALUES (f'')''')
         conn.commit()
 
 
