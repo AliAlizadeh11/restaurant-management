@@ -26,11 +26,41 @@ def insert_table():
         conn.commit()
 
 
-def update_table():
+def update_table_name():
         """update records from customers"""
-        c.execute("UPDATE customers SET")
+        c.execute("UPDATE customers SET name = '' WHERE national_code = ''")
         conn.commit()
 
+
+def update_table_family_name():
+        """update records from customers"""
+        c.execute("UPDATE customers SET family_name = '' WHERE national_code = ''")
+        conn.commit()
+
+
+def update_table_phone_number():
+        """update records from customers"""
+        c.execute("UPDATE customers SET phone_number = '' WHERE national_code = ''")
+        conn.commit()
+
+
+def update_table_email():
+        """update records from customers"""
+        c.execute("UPDATE customers SET email = '' WHERE national_code = ''")
+        conn.commit()
+
+
+def update_table_password():
+        """update records from customers"""
+        c.execute("UPDATE customers SET password = '' WHERE national_code = ''")
+        conn.commit()
+
+
+def update_table_photo():
+        """update records from customers"""
+        c.execute("UPDATE customers SET photo = '' WHERE national_code = ''")
+        conn.commit()
+        
 
 def delete_table():
         """delete records from customers"""
