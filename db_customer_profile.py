@@ -7,62 +7,41 @@ conn = sqlite3.connect('customers.db')
 c = conn.cursor()
 
 
-def update_table_name():
+def update_table_name(name, national_code):
         """update records from customers"""
-        c.execute("UPDATE customers SET name = '' WHERE national_code = ''")
+        c.execute(f"UPDATE customers SET name = '{name}' WHERE national_code = '{national_code}'")
         conn.commit()
 
 
-def update_table_family_name():
+def update_table_family_name(family_name, national_code):
         """update records from customers"""
-        c.execute("UPDATE customers SET family_name = '' WHERE national_code = ''")
+        c.execute(f"UPDATE customers SET family_name = '{family_name}' WHERE national_code = '{national_code}'")
         conn.commit()
 
 
-def update_table_phone_number():
+def update_table_phone_number(phone_number, national_code):
         """update records from customers"""
-        c.execute("UPDATE customers SET phone_number = '' WHERE national_code = ''")
+        c.execute(f"UPDATE customers SET phone_number = '{phone_number}' WHERE national_code = '{national_code}'")
         conn.commit()
 
 
-def update_table_email():
+def update_table_email(email, national_code):
         """update records from customers"""
-        c.execute("UPDATE customers SET email = '' WHERE national_code = ''")
+        c.execute(f"UPDATE customers SET email = '{email}' WHERE national_code = '{national_code}'")
         conn.commit()
 
 
-def update_table_password():
+def update_table_password(password, national_code):
         """update records from customers"""
-        c.execute("UPDATE customers SET password = '' WHERE national_code = ''")
+        c.execute(f"UPDATE customers SET password = '{password}' WHERE national_code = '{national_code}'")
         conn.commit()
 
 
-def update_table_photo():
+def update_table_photo(photo, national_code):
         """update records from customers"""
-        c.execute("UPDATE customers SET photo = '' WHERE national_code = ''")
+        c.execute(f"UPDATE customers SET photo = '{photo}' WHERE national_code = '{national_code}'")
         conn.commit()
         
-
-
-def query():
-        """query to database"""
-        c.execute('SELECT * FROM customers')
-        conn.commit()
-        items = c.fetchall()
-                
-        #WHERE IN FETCHED VALUES
-        c.execute("SELECT * FROM customers WHERE'")
-        conn.commit()
-        items = c.fetchall()
-        
-        #where with like
-        c.execute("SELECT * FROM customers WHERE'")
-        conn.commit()
-        items = c.fetchall()
-
-
-#commit our command
-conn.commit()
 
 #close the connection
 conn.close()
