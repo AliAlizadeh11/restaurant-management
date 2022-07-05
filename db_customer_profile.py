@@ -1,7 +1,7 @@
 import sqlite3
 
 #connect to database
-conn = sqlite3.connect('customers.db')
+conn = sqlite3.connect('customer.db')
 
 #create a cursor
 c = conn.cursor()
@@ -41,7 +41,3 @@ def update_table_photo(photo, national_code):
         """update records from customers"""
         c.execute(f"UPDATE customers SET photo = '{photo}' WHERE national_code = '{national_code}'")
         conn.commit()
-        
-
-#close the connection
-conn.close()

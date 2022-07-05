@@ -2,12 +2,13 @@ import re
 import customer_database
 
 class CreateCustomer:
-    def __init__(self, name, family_name, phone_number, email, national_code, password, repeat_password):
+    def __init__(self, name, family_name, phone_number, email, national_code, address, password, repeat_password):
         self.name = name
         self.family_name = family_name
         self.phone_number = phone_number
         self.email = email
         self.national_code = national_code
+        self.address = address
         self.password = password
         self.repeat_password = repeat_password
 
@@ -85,6 +86,20 @@ class CreateCustomer:
         
     
     @property
+    def address(self):
+        return self._address
+
+    @address.setter
+    def address(self, value):
+        validate_address = '^[a-zA-Z0-9]+$'
+        
+        if not re.match(validate_address, value):
+            raise ValueError("address must be without any punctuation.")
+        
+        self._address = value
+    
+    
+    @property
     def password(self):
         return self._password
     
@@ -110,4 +125,5 @@ class CreateCustomer:
         
         self._repeat_password = value
 
-customer_objects = CreateCustomer()
+
+customer_input = CreateCustomer()
