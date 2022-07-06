@@ -1,4 +1,3 @@
-import create_customer
 import random
 import smtplib
 
@@ -12,6 +11,7 @@ def discount_code(customer_email):
     smtplib_obj.ehlo()
     smtplib_obj.starttls()
     
-    smtplib_obj.login("AP4002Group4@gmail.com", "rginclqnytypwofj")
+    smtplib_obj.login("AP4002Group4@gmail.com", "xebtkitiubkazoku")
     smtplib_obj.sendmail("AP4002Group4@gmail.com", f"{customer_email}", f"Subject:discount code\n{final_code}")
     smtplib_obj.quit()
+
