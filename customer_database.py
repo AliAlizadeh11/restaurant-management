@@ -9,7 +9,7 @@ c = conn.cursor()
 
 def create_table():
         """create a table"""
-        c.execute('''CREATE TABLE IF NOT EXISTS customers
+        c.execute('''CREATE TABLE IF NOT EXISTS customer
                 (name text NOT NULL,
                 family_name text NOT NULL, 
                 phone_number integer NOT NULL, 
