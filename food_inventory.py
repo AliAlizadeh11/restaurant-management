@@ -11,8 +11,9 @@ class Dish:
     required_ingredients = dict()
 
     def __init__(self, name: str, required_ingredients: dict):
-        self.required_ingredients = required_ingredients
         self.name = name
+        self.required_ingredients = required_ingredients
+        
 
     def add_ingredient(self, name, amount):
         self.required_ingredients[name] = amount
@@ -47,17 +48,17 @@ class Dish:
 
 def save_obj(obj, name):
     current_directory_is = os.getcwd()
-    final_directory_is = os.path.join(current_directory_is, r'FoodMonitor')
+    final_directory_is = os.path.join(current_directory_is, r'food_inventory')
     
     if not os.path.exists(final_directory_is):
         os.makedirs(final_directory_is)
 
-    with open('FoodMonitor/' + name + '.pkl', 'wb') as f:
+    with open('food_inventory/' + name + '.pkl', 'wb') as f:
         pickle.dump(obj, f, pickle.HIGHEST_PROTOCOL)
 
 
 def load_obj(name):
-    with open('FoodMonitor/' + name + '.pkl', 'rb') as f:
+    with open('food_inventory/' + name + '.pkl', 'rb') as f:
         return pickle.load(f)
 
 
@@ -145,7 +146,7 @@ def edit_dish():
 
             print("How many ingredients will the dish contain?")
             amount = get_int()
-            list_of_ingredients = {}
+            list_of_ingredients = dict()
 
             # get ingredients
             print("Enter all your ingredients:")
@@ -267,6 +268,7 @@ def edit_dish():
         
     else:
         modify_dish()
+        
     time.sleep(1)
 
 
@@ -355,7 +357,7 @@ def get_dishes():
 
 
 current_directory = os.getcwd()
-final_directory = os.path.join(current_directory, r'FoodMonitor')
+final_directory = os.path.join(current_directory, r'food_inventory')
 
 if os.path.exists(final_directory):
     remaining_ingredients = load_obj("I")
