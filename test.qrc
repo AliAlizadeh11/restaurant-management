@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="newPrefix">
+    <file>menu_of_restaurant.png</file>
+  </qresource>
+</RCC>
