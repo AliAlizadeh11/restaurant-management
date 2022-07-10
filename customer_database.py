@@ -1,5 +1,5 @@
 import sqlite3
-from firstpage_GUI import CustomerSignup
+
 #connect to database
 conn = sqlite3.connect('customer.db')
 

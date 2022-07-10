@@ -891,6 +891,9 @@
          <height>251</height>
         </rect>
        </property>
+       <property name="styleSheet">
+        <string notr="true">font-size: 13pt</string>
+       </property>
       </widget>
      </widget>
      <widget class="QFrame" name="frame_9">
@@ -919,6 +922,9 @@
          <width>381</width>
          <height>341</height>
         </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font-size: 13pt</string>
        </property>
        <property name="autoScroll">
         <bool>true</bool>

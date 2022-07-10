@@ -11,7 +11,6 @@ def create_table():
         c.execute('''CREATE TABLE IF NOT EXISTS vote
                 (content text NOT NULL)''')
 
-create_table()
 
 def insert_table_vote(content):
         try:
@@ -21,11 +20,9 @@ def insert_table_vote(content):
         except Exception as e:
                 print(e)
 
-
 def votes():
         c.execute(f"SELECT * FROM vote")
         items = c.fetchall()
         return items[0][0]
 
-
-
+print(votes())
