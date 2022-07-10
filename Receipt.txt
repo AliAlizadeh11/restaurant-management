@@ -1,0 +1,6 @@
+10/07/2022
+ITEMS				QUANTITY	PRICE
+----------------------------------------------------------
+Shrimp Cocktail		2		60
+Filet Mignon, 12ounce		2		80
+TOTAL : $140
